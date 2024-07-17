@@ -2,9 +2,9 @@ import os
 
 def greetingString():
         os.system("CLS")
-        print('  -------------------------------------------------------------------- ')
-        print(f"  Welcome to the automated DHCP Snooping configuration Check program ")
-        print('  -------------------------------------------------------------------- ')
+        print('  --------------------------------------------------------------- ')
+        print(f"  Welcome to the automated SNMP & Logging configuration program ")
+        print('  --------------------------------------------------------------- ')
 
 def menuString(deviceIP, username):
         os.system("CLS")
@@ -13,7 +13,7 @@ def menuString(deviceIP, username):
         print('\t\t    Menu - Please choose an option')
         print('\t\t     Only numbers are accepted')
         print('  -------------------------------------------------------------- ')
-        print('  >\t         1. To check DHCP Snooping Config:\t       <\n')   
+        print('  >\t         1. To configure SNMP & Logging:\t       <\n')   
         print('  >\t\t      2. Exit the program\t\t       <')
         print('  -------------------------------------------------------------- \n')
 
