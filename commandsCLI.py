@@ -73,14 +73,16 @@ def snmpLoggingConfig(validIPs, username, netDevice):
                         for interface in shVlanIDsOut1:
                             interface = interface.strip()
                             snmpLoggingConf[0] = f'int {interface}'
+                            print(snmpLoggingConf)
 
-                            snmpLoggingConfStr = " ".join(snmpLoggingConf)
-                            snmpLoggingConfStr.split('\n')
+                            #snmpLoggingConfStr = " ".join(snmpLoggingConf)
+                            #snmpLoggingConfStr.split()
+                            #print(snmpLoggingConfStr)
 
-                            print(f"INFO: Modifying the interface {interface} on device {validDeviceIP} with the following config:\n{snmpLoggingConfStr}")
-                            authLog.info(f"Modifying the interface {interface} on device {validDeviceIP} with the following config:\n{snmpLoggingConfStr}")
+                            #print(f"INFO: Modifying the interface {interface} on device {validDeviceIP} with the following config:\n{snmpLoggingConfStr}")
+                            #authLog.info(f"Modifying the interface {interface} on device {validDeviceIP} with the following config:\n{snmpLoggingConfStr}")
 
-                            snmpLoggingConfOut = sshAccess.send_command(snmpLoggingConf)
+                            snmpLoggingConfOut = sshAccess.send_config_set(snmpLoggingConf)
 
                             authLog.info(f"Interface {interface} on device {validDeviceIP} was successfully configured:\n{snmpLoggingConfOut}")
                             print(f"INFO: Sucessfully configured interface {interface} on device {validDeviceIP}")
